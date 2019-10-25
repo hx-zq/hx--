@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>珠宝配饰</title>
+</head>
+<style>
+*{
+        margin: 0;
+        padding: 0;
+
+    }
+    ul,
+    ol{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+    }
+    .header{
+        height: 80px;
+        background-color: #ffffff;
+        }
+    .zhuti1{
+        height: 473px;
+    }
+    .zhuti2{
+        height: 743px;
+    }
+    .news{
+        height: 472px;
+        background-color: #dddddd;
+    }
+    .footer{
+            height: 100px;
+            background-color: #4d4d4d;
+        }
+        
+        .header-c,
+        .zhuti1-c,
+        .zhuti2-c,
+        .news-c,
+        .footer-c{
+
+            position: relative;
+            overflow: hidden;
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+        }
+        .header-c .logo{
+            float: left;
+            width: 177px;
+            height: 42px;
+            margin: 23px 0 15px 60px;
+            background: url('img/logo.png') no-repeat center;
+        }
+        .header-ul{
+            position: absolute;
+            right: 0;
+        }
+        .header-li{
+            position: relative;
+            float: left;
+            /* width: 80px; */
+            height: 100%;
+            text-align: center;
+            margin-left: 84px;
+          
+            
+        }
+        .header-c .header-li a{
+         display: block;
+         color: #5a5a5a ;
+         line-height: 80px;         
+         font-size: 16px;
+         width: 100%;
+         height: 100%;
+         
+
+     }
+        .header-c  .header-li span{
+         display: none;
+         position: absolute;
+         left: 0;
+         bottom: 24px;
+         width: 100%;
+         height: 2px;
+         background-color: #b9ab77;
+         }
+     
+         .header-c .header-li.active a {
+            color: #281717;
+          
+         }
+
+        .header-c .header-li.active span {
+            display: block;
+        }
+
+     
+         .header-c .header-li:hover a{
+        color: #281717;
+         }
+         .header-c .header-li:hover span{
+          display: block;
+        }
+        .zhuti1-c{
+            position: relative;
+            margin-top: 100px;
+            width: 1200px;
+            height: 473px;
+            /* background-color: red; */
+        }
+        .zhuti1-img{
+            float: left;
+            width: 708px;
+            height: 473px;
+            background: url(img/1.png) no-repeat center;
+        }
+        .zhuti1-txt{
+            float: left;
+            
+           width: 492px;
+           height: 473px;
+           /* background-color: green; */
+        }
+        .zhuti1-li1{
+           
+            margin-left: 74px;
+            margin-top: 20px;
+            padding-left: 14px;
+            color: #2a2a2a;
+            font-size: 30px;
+            border-left: 2px solid black;
+        }
+        .zhuti1-li1 .p1{
+            padding-left: 138px;
+            color: #4c4c4c;
+            font-size: 16px;
+
+        }
+        .zhuti1-li2{
+            margin-top: 20px;
+            margin-left: 165px;
+            color: #c1c1c1;
+            font-size: 16px;
+        }
+   
+        .zhuti1-li2 .p3{
+            padding-left: 64px;
+        }
+       .zhuti1-li3{
+           margin-top: 50px;
+           margin-left: 90px;
+           color: #c1c1c1;
+           font-size: 16px;
+       }
+       .zhuti1-li4{
+           width: 150px;
+           height: 45px;
+           margin-top: 60px;
+           font-size: 12px;
+           color: #2d2d2d;
+           text-align: center;
+           line-height: 45px;
+           border: 1px solid  #f5f5f5;
+           margin-left: 209px;
+          
+         
+       }
+        .zhuti2-c{
+            margin-top: 50px;
+            width:1200px ;
+            height: 743px;
+            background-color: #ffffff;
+        }
+        .zt2-img{
+            width: 708px;
+            height: 473px;
+            background: url(img/2.png) no-repeat center;
+        }
+        .zt2-txt{
+            margin-top: 60px;
+            width: 708px;
+            height: 150px;
+            color: #747474;
+            font-size: 14px;
+        }
+        .zt2-p1{
+            margin-top: 40px;
+        }
+        .zt2-p2{
+            margin-top: 12px;
+        }
+        .news-a{
+            margin-top: 100px;
+            width: 1200px;
+            height: 31px;
+        }
+        .news-box1{
+            float: left;
+            display: block;
+            width: 40px;
+            height: 30px;
+            font-size: 12px;
+            color: #a6a6a6;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 40px;
+            background-color: #f7f5f5;
+           
+        }
+        .news-box2{
+            float: left;
+            display: block;
+            width: 40px;
+            height: 30px;
+            font-size: 12px;
+            color: #a6a6a6;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 40px;
+            background-color: #f7f5f5;
+           
+        }
+        .news-box3{
+            float: left;
+            display: block;
+            width: 40px;
+            height: 30px;
+            font-size: 12px;
+            color: #a6a6a6;
+            text-align: center;
+            line-height: 30px;
+            background-color: #f7f5f5;
+           
+        }
+        .news-img{
+            margin-top: 40px;
+            width: 1200px;
+            height: 137px;
+
+
+        }
+        .news-li1{
+
+            float: left;
+            margin-right: 35px;
+            width: 212px;
+            height: 137px;
+            background: url(img/3.png) no-repeat center;
+
+        }
+        .news-li1 .img1{
+            width: 192px;
+            height: 45px;
+            background-color: #4e5a5f;
+            margin-top: 77px;
+           padding-left: 16px;
+           padding-top: 15px;
+            color: #fffefe;
+            font-size: 12px;
+           
+        }
+        .news-li2{
+            float: left;
+            margin-right: 35px;
+            width: 212px;
+            height: 137px;
+            background: url(img/4.png) no-repeat center;
+
+        }
+        .news-li3{
+            float: left;
+            margin-right: 35px;
+            width: 212px;
+            height: 137px;
+            background: url(img/5.png) no-repeat center;
+
+        }
+        .news-li4{
+            float: left;
+            margin-right: 35px;
+            width: 212px;
+            height: 137px;
+            background: url(img/6.png) no-repeat center;
+
+        }
+        .news-li5{
+            float: left; 
+            width: 212px;
+            height: 137px;
+            background: url(img/7.png) no-repeat center;
+
+        }
+        
+        .news-mo{
+            margin-top: 60px;
+            font-size: 12px;
+            color: #c2c1c1;
+            text-align: center;
+            width: 150px;
+            height: 49px;
+            line-height: 49px;
+            border: 1px solid #c2c1c1;
+            margin-left: 525px;
+            
+        }
+
+
+        .footer-p{
+          margin-top: 39px;
+          font-size: 12px;
+          color: #323232;
+
+      }
+      .footer-p2{
+          margin-top: 13px;
+          font-size: 12px;
+          color: #323232;
+
+      }
+      .footer-div{
+          position: absolute;
+          right: 0;
+          bottom: 43px;
+          font-size: 12px;
+         
+      }
+      .footer-div a{
+       
+          color: #323232;
+      }
+      .footer-a1{
+          margin-right: 64px;
+      }
+      .footer-a2{
+         margin-right: 60px;
+      }
+
+</style>
+
+<body>
+    <div class="header">
+    
+        <div class="header-c">
+            <a href="#" class="logo"></a>
+        <ul class="header-ul">
+            <li class="header-li ">
+                <a href="#" class="header-a" >首页</a>
+                <span></span>
+            </li>
+            <li class="header-li ">
+                <a href="#" class="header-a">婚纱礼服</a>
+                <span></span>
+            </li>
+            <li class="header-li active">
+                <a href="#" class="header-a">珠宝配饰</a>
+                <span></span>
+            </li>
+            <li class="header-li">
+                <a href="#" class="header-a">最新活动</a>
+                <span></span>
+            </li>
+            <li class="header-li">
+                <a href="#" class="header-a">联系我们</a>
+                <span></span>
+            </li>
+        </ul>
+        </div>
+    </div>
+    <div class="zhuti1">
+        <div class="zhuti1-c">
+            <div class="zhuti1-img">
+
+            </div>
+            <div class="zhuti1-txt">
+                <ul class="zhuti1-ul">
+                    <li class="zhuti1-li1">
+                      
+                        HardWear系列
+                        <p class="p1">对戒, 耳饰</p>
+                    </li>
+                    <li class="zhuti1-li2">
+                       <p class="p3">$23199.00</p>
+                        
+                    </li>
+                    <li class="zhuti1-li3">
+                        18K白金镶圆形明亮式切割钻石,钻石总量5.99克拉;直接12毫米
+                        ,舒适设计,易于佩戴.
+                    </li>
+                    <li class="zhuti1-li4">
+                        立即预约
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        
+
+    </div>
+    <div class="zhuti2">
+        <div class="zhuti2-c">
+            <div class="zt2-img">
+               
+            </div>
+            <div class="zt2-txt">
+                <p>Veronica HardWear系列优雅与颠覆精神并存,敏感捕捉到漫步纽约的时尚女性的精髓与能两
+                    ,璀璨的钻石,更加凸显了这枚戒指的女性魅力.
+                </p>
+                <p class="zt2-p1">
+                    钻戒: $1900.00
+                </p>
+                <p class="zt2-p2">
+                    耳饰: $3899.00
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="news">
+        <div class="news-c">
+            <div class="news-a">
+                <a href="#" class="news-box1">戒指</a>
+                <a href="#" class="news-box2">项链</a>
+                <a href="#" class="news-box3">其他</a>
+            </div>
+            <div class="news-img">
+                <ul class="news-ul">
+                    <li class="news-li1">
+                        <div class="img1">
+                            VERONICA victorla系列Altermating戒指
+                        </div>
+                    </li>
+                    <li class="news-li2">
+                        <div class="img2"></div>
+                    </li>
+                    <li class="news-li3">
+                        <div class="img3"></div>
+                    </li>
+                    <li class="news-li4">
+                        <div class="img4"></div>
+                    </li>
+                    <li class="news-li5">
+                        <div class="img5"></div>
+                    </li>
+                    <li class="news-li6">
+                        <div class="img6"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="news-mo">
+                MORE
+            </div>
+        </div>
+
+
+    </div>
+    <div class="footer">
+            <div class="footer-c">
+                    <p class="footer-p">网站备案号: 豫ICP备110121210号</p>
+                    <p class="footer-p2">增值电信经营许可证号: 豫B220100033</p>
+                    <div class="footer-div">
+                            <a href="#" class="footer-a1">@2018 VERONICA</a>
+                            <a href="#" class="footer-a2">联系我们</a>
+                            <a href="#" class="footer-a3">加入我们</a>
+                    </div>
+                </div>
+                
+    </div>
+    
+</body>
+</html>

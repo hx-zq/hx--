@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>婚纱主页</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+
+    }
+    ul,
+    ol{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+    }
+    .header{
+        height: 80px;
+        background-color: #ffffff;
+        }
+        .banner{
+            height: 720px;
+            background: url(img/banner1.png) no-repeat center; 
+            background-size: cover;
+
+        }
+        .wedding{
+            height: 827px;
+            background-color: #ffffff;
+        }
+        .jewelry{
+            height: 557px;
+            background-color: #f9f9f9;
+        }
+        .activity{
+            position: relative;
+            height: 876px;
+            background-color: #fff;
+        }
+        .designer{
+            height: 664px;
+            background-color: #4d4d4d;
+        }
+        .footer{
+            height: 100px;
+            background-color: #ffffff;
+        }
+        .header-c,
+        .banner-c,
+        .wedding-c,
+        .jewelry-c,
+        .activity-c,
+        .designer-c,
+        .footer-c {
+            position: relative;
+            overflow: hidden;
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+        }
+        .header-c .logo{
+            float: left;
+            width: 177px;
+            height: 42px;
+            margin: 23px 0 15px 60px;
+            background: url('img/logo.png') no-repeat center;
+        }
+        .header-ul{
+            position: absolute;
+            right: 0;
+        }
+        .header-li{
+            position: relative;
+            float: left;
+            /* width: 80px; */
+            height: 100%;
+            text-align: center;
+            margin-left: 84px;
+          
+            
+        }
+        .header-c .header-li a{
+         display: block;
+         color: #5a5a5a ;
+         line-height: 80px;         
+         font-size: 16px;
+         width: 100%;
+         height: 100%;
+         
+
+     }
+        .header-c  .header-li span{
+         display: none;
+         position: absolute;
+         left: 0;
+         bottom: 24px;
+         width: 100%;
+         height: 2px;
+         background-color: #b9ab77;
+         }
+     
+         .header-c .header-li.active a {
+            color: #281717;
+          
+         }
+
+        .header-c .header-li.active span {
+            display: block;
+        }
+
+     
+         .header-c .header-li:hover a{
+        color: #281717;
+         }
+         .header-c .header-li:hover span{
+          display: block;
+        }
+        /* .banner-c{
+            background: url('img/banner1.png')no-repeat center;
+        } */
+        .banner-c .banner-mo{
+            position: absolute;
+            right: 60px;
+            bottom: 231px;
+            width: 206px;
+            height: 50px;
+            border: 1px solid #b9ab77;
+            line-height: 50px;
+            text-align: center;
+            font-size: 20px;
+            color:#b9ab77;
+        }
+        .banner-c .banner-mo2{
+            position: absolute;
+            right: 70px;
+            bottom: 220px;
+            border: 1px solid #c1c1c1;
+            width: 206px;
+            height: 50px;
+        }
+        .banner-c .arr{
+        position: absolute;
+        width: 42px;
+        height: 70px;
+        /* background-color: red; */
+
+        }
+        .banner-c .arrleft{
+            left: -52px;
+            top: 50%;
+            margin-top: -35px;
+            background: url('img/arr.png') no-repeat -84px 0; 
+        }
+        .banner-c .arrright{
+            right: -52px;
+            top: 50%;
+            margin-top: -35px;
+            background: url('img/arr.png') no-repeat right;
+        }
+        .banner-c .arrleft:hover{
+            background-position: 0 0;
+        }
+        .banner-c .arrright:hover{
+            background-position: -42px 0;
+        }
+        .banner .dots {
+            position: absolute;
+            /* banner-c 的50% */
+            left: 50%;
+            bottom: 20px;
+            margin-left: -34px;
+            width: 68px;
+            height: 14px;
+        }
+
+        .banner .dot-item {
+            float: left;
+            width: 10px;
+            height: 10px;
+            background-color: #bebec2;
+            margin: 0 10px;
+            border-radius: 50%;
+            border: 2px solid transparent;
+            /* 背景色只在内容区生效 */
+            background-clip: content-box;
+        }
+
+        .banner .dot-item:hover {
+            border-color: #bebec2;
+            background-color: #fff;
+        }
+        .wedding-p{
+            margin-top: 100px;
+            text-align: center;
+          }
+          .p1{
+              font-size: 26px;
+              color: #444444;
+          }
+          .p2{
+              font-size: 16px;
+              color: #c1c1c1;
+          }
+          .wedding-ul{
+              position: absolute;
+              left: 330px;
+             
+             margin-top: 100px;
+             /* width: 100%; */
+             height: 32px;
+           
+
+          }
+          .wedding-li{
+             
+            
+              float: left;
+              /* margin-top: 100px; */
+              margin-right: 90px;
+              width: 72px;
+              /* height: 100%; */
+              text-align: center;
+              line-height: 30px;
+
+          }
+          .wedding-li a{
+         display: block;
+         color: #5a5a5a ;
+         font-size: 16px;
+         width: 100%;
+         height: 100%;
+         
+
+     }
+        .wedding-li span{
+         display: none;
+         margin-left: 30px;
+         margin-top: 10px;
+         
+         width: 4px;
+         height: 4px;
+         border-radius: 50%;
+         background-color: #b9ab77;
+         }
+     
+        .wedding-li.active a {
+            color: #b9ab77;
+          
+         }
+
+         .wedding-li.active span {
+            display: block;
+        }
+
+     
+         .wedding-li:hover a{
+        color: #b9ab77;
+         }
+       .wedding-li:hover span{
+          display: block;
+        }
+        .wedding-img{
+            position: absolute;
+            bottom: 165px;
+            margin-top: 40px;
+            overflow: hidden;
+        }
+        .wedding-im1{
+            float: left;
+           width: 270px; 
+           height: 360px;
+           background: url('img/1.png') no-repeat center;
+           margin-right: 30px;
+        }
+        .wedding-im2{
+            float: left;
+           width: 270px; 
+           height: 360px;
+           background: url('img/2.png') no-repeat center;
+           margin-right: 30px;
+        }
+        .wedding-im3{
+            float: left;
+           width: 270px; 
+           height: 360px;
+           background: url('img/3.png') no-repeat center;
+           margin-right: 30px;
+        }
+        .wedding-im4{
+            float: left;
+           width: 270px; 
+           height: 360px;
+           background: url('img/4.png') no-repeat center;
+        }
+        .wedding-mo{
+            position: absolute;
+            bottom: 60px;
+            left: 545px;
+            margin-top: 60px;
+          
+            text-align: center;
+            border: 1px solid #f5f5f5;
+            padding: 16px  57px;
+            
+        }
+        .jewelry-p{
+            margin-top: 100px;
+            text-align: center;
+        }
+        .jewelry-img{
+            margin-top: 40px;
+            overflow: hidden;
+        }
+        .jewelry-im5{
+           float: left;
+           width: 270px; 
+           height: 180px;
+           background: url('img/5.png') no-repeat center;
+           margin-right: 30px;
+        }
+        .jewelry-im6{
+            float: left;
+           width: 270px; 
+           height: 180px;
+           background: url('img/6.png') no-repeat center;
+           margin-right: 30px;
+        }
+        .jewelry-im7{
+            float: left;
+           width: 270px; 
+           height: 180px;
+           background: url('img/7.png') no-repeat center;
+           margin-right: 30px;
+        }
+        .jewelry-im8{
+            float: left;
+           width: 270px; 
+           height: 180px;
+           background: url('img/8.png') no-repeat center;
+           margin-right: 30px;
+        }
+       .jewelry-mo{
+        position: absolute;
+            bottom: 60px;
+            left: 545px;
+            margin-top: 60px;
+          
+            text-align: center;
+            border: 1px solid #f5f5f5;
+            padding: 16px  57px;
+            
+
+       }
+       .activity-p{
+           margin-top: 100px;
+           text-align: center;
+       }
+       .activity-bj{
+           position: absolute;
+           top: 208px;
+           width: 1800px;
+           height: 354px;
+           background: url(img/bj1.png) no-repeat center;
+       }
+       .activity-tt{
+           position: absolute;
+           top: 354px;
+       }
+       .activity-ul{
+    
+           position: relative;
+           width: 300px;
+           height: 334px;
+           background-color: #ffffff;
+       }
+       .activity-li1{
+           position: absolute;
+           top: 44px;
+           left: 43px;
+           font-size: 30px;
+           color: #8b8b8b;
+       }
+       .activity-li1 span{
+           font-size: 14px;
+           margin-left: 14px;
+       }
+       .activity-li2{
+           position: absolute;
+           top: 115px;
+           left: 43px;
+           font-size: 16px;
+           color: black;
+       }
+       .activity-li3{
+           position: absolute;
+           top: 150px;
+           left: 43px;
+           font-size: 13px;
+           color: #8b8b8b;
+       }
+       .activity-li4{
+           position: absolute;
+           bottom: 83px;
+           left: 43px;
+           font-size: 14px;
+           color: #bebebe;
+       }
+       .activity-txt1{
+           float: left;
+           width: 300px;
+           height: 334px;
+   
+       }
+       .activity-txt2{
+           float: left;
+           width: 300px;
+           height: 334px;
+           background: url('img/9.png') no-repeat center;
+       }
+       .activity-txt3{
+           float: left;
+           width: 300px;
+           height: 334px;
+  
+       }
+       .activity-txt4{
+           float: left;
+           width: 300px;
+           height: 334px;
+           
+       }
+       .activity-mo{
+        position: absolute;
+            bottom: 60px;
+            left: 545px;
+            margin-top: 60px;
+          
+            text-align: center;
+            border: 1px solid #f5f5f5;
+            padding: 16px  57px;
+            
+       }
+       .designer-p{
+           margin-top: 100px;
+           text-align: center;
+       }
+       .designer-tt{
+           position: relative;
+           width: 1200px;
+           height:453px ;
+           margin-top: 60px;
+       }
+       .designer-txt1{
+           float: left;
+           margin-left: 50px;
+           margin-right: 138px;
+           display: block;
+           width: 280px;
+           height: 453px;
+           /* background-color: red; */
+       }
+       .designer-img{
+           margin-left: 48px;
+           width: 180px;
+           height: 180px;
+           border-radius: 50%;
+           background: url('img/10.png') no-repeat center;
+
+       }
+      .designer-li1{
+         
+          font-size: 24px;
+          color: #f7f5f5;
+          text-align: center;
+
+      }
+      .designer-li2{
+          font-size: 12px;
+          color: #b9b9b9;
+          text-align: center;
+          margin-top: 10px;
+          margin-bottom: 20px;
+      }
+      .designer-li3{
+          font-size: 12px;
+          color: #b9b9b9;
+          text-align: center;
+      }
+      .designer-li4{
+          margin-top: 66px;
+          font-size: 12px;
+          color: #b9b9b9;
+          text-align: center;
+      }
+      .designer-li4 span{
+          display: block;
+          width: 150px;
+          height: 1px;
+          margin-left:64px ;
+          margin-top: 16px;
+       background-color: #b9b9b9;
+      }
+      .designer-txt2{
+        float: left;
+        margin-right: 142px;
+           display: block;
+           width: 280px;
+           height: 453px;
+           /* background-color: red; */
+       }
+       .designer-img2{
+           margin-left: 48px;
+           width: 180px;
+           height: 180px;
+           border-radius: 50%;
+           background: url('img/11.png') no-repeat center;
+
+       }
+      .designer-li1{
+         
+          font-size: 24px;
+          color: #f7f5f5;
+          text-align: center;
+
+      }
+      .designer-li2{
+          font-size: 12px;
+          color: #b9b9b9;
+          text-align: center;
+          margin-top: 10px;
+          margin-bottom: 20px;
+      }
+      .designer-li3{
+          font-size: 12px;
+          color: #b9b9b9;
+          text-align: center;
+      }
+      .designer-li4{
+          margin-top: 66px;
+          font-size: 12px;
+          color: #b9b9b9;
+          text-align: center;
+      }
+      .designer-li4 span{
+          display: block;
+          width: 150px;
+          height: 1px;
+          margin-left:64px ;
+          margin-top: 16px;
+       background-color: #b9b9b9;
+      }
+      .designer-txt3{
+         float: left;
+         
+           display: block;
+           width: 280px;
+           height: 453px;
+           /* background-color: red; */
+       }
+       .designer-img3{
+           margin-left: 48px;
+           width: 180px;
+           height: 180px;
+           border-radius: 50%;
+           background: url('img/12.png') no-repeat center;
+
+       }
+      .designer-li1{
+         
+          font-size: 24px;
+          color: #f7f5f5;
+          text-align: center;
+
+      }
+      .designer-li2{
+          font-size: 12px;
+          color: #b9b9b9;
+          text-align: center;
+          margin-top: 10px;
+          margin-bottom: 20px;
+      }
+      .designer-li3{
+          font-size: 12px;
+          color: #b9b9b9;
+          text-align: center;
+      }
+      .designer-li4{
+          margin-top: 66px;
+          font-size: 12px;
+          color: #b9b9b9;
+          text-align: center;
+      }
+      .designer-li4 span{
+          display: block;
+          width: 150px;
+          height: 1px;
+          margin-left:64px ;
+          margin-top: 16px;
+       background-color: #b9b9b9;
+      }
+      .footer-p{
+          margin-top: 39px;
+          font-size: 12px;
+          color: #323232;
+
+      }
+      .footer-p2{
+          margin-top: 13px;
+          font-size: 12px;
+          color: #323232;
+
+      }
+      .footer-div{
+          position: absolute;
+          right: 0;
+          bottom: 43px;
+          font-size: 12px;
+         
+      }
+      .footer-div a{
+       
+          color: #323232;
+      }
+      .footer-a1{
+          margin-right: 64px;
+      }
+      .footer-a2{
+         margin-right: 60px;
+      }
+
+       
+       
+         
+   
+    </style>
+</head>
+<body>
+    <div class="header">
+        
+        <div class="header-c">
+                <a href="#" class="logo"></a>
+            <ul class="header-ul">
+                <li class="header-li active">
+                    <a href="#" class="header-a" >首页</a>
+                    <span></span>
+                </li>
+                <li class="header-li">
+                    <a href="#" class="header-a">婚纱礼服</a>
+                    <span></span>
+                </li>
+                <li class="header-li">
+                    <a href="#" class="header-a">珠宝配饰</a>
+                    <span></span>
+                </li>
+                <li class="header-li">
+                    <a href="#" class="header-a">最新活动</a>
+                    <span></span>
+                </li>
+                
+                <li class="header-li">
+                    <a href="#" class="header-a">联系我们</a>
+                    <span></span>
+                </li>
+            </ul>
+            
+
+        </div>
+    </div>
+    <div class="banner">
+        <div class="banner-c">
+            <div class="banner-mo">
+                <i>MORE</i>
+            </div>
+            <div class="banner-mo2">
+
+            </div>
+            <a href="#" class="arr arrleft"></a>
+            <a href="#" class="arr arrright"></a>
+            <ul class="dots">
+                <li class="dot-item"></li>
+                <li class="dot-item"></li>
+            </ul>
+        </div>
+        
+    </div>
+    <div class="wedding">
+        <div class="wedding-c">
+            <div class="wedding-p">
+                <p class="p1">婚纱礼服</p>
+                <p class="p2">Wedding Dress </p>
+            </div>
+        
+            <ul class="wedding-ul">
+                <li class="wedding-li active">
+                    <a href="#" class="wedding-a">新品/new</a>
+                    <span></span>
+                    
+                </li>
+                <li class="wedding-li">
+                        <a href="#" class="wedding-a">2018春夏</a>
+                        <span></span>
+                        
+                    </li>
+                <li class="wedding-li">
+                        <a href="#" class="wedding-a">2018秋冬</a>
+                        <span></span>
+                        
+                    </li>
+                <li class="wedding-li">
+                        <a href="#" class="wedding-a">专属定制</a>
+                        <span></span>
+                        
+                    </li>
+            </ul>
+            <ul class="wedding-img">
+                    <li class="wedding-im1">
+                        <div class="img1"></div>
+                    </li>
+                    <li class="wedding-im2">
+                        <div class="img2"></div>
+                    </li>
+                    <li class="wedding-im3">
+                        <div class="img3"></div>
+                    </li>
+                    <li class="wedding-im4">
+                        <div class="img4"></div>
+                    </li>
+                </ul>
+                <div class="wedding-mo">
+                    MORE
+                </div>
+
+        </div>
+    </div>
+    <div class="jewelry">
+        <div class="jewelry-c">
+            <div class="jewelry-p">
+                    <p class="p1">珠宝配饰</p>
+                    <p class="p2">Jewelry Show </p>
+                </div>
+                <ul class="jewelry-img">
+                    <li class="jewelry-im5">
+                        <div class="img5"></div>
+                    </li>
+                    <li class="jewelry-im6">
+                        <div class="img6"></div>    
+                    </li>
+                    <li class="jewelry-im7">
+                        <div class="img7"></div>
+                    </li>
+                    <li class="jewelry-im8">
+                        <div class="img8"></div>
+                    </li>
+                </ul>
+                <div class="jewelry-mo">
+                    MORE
+                </div>
+
+        </div>
+    </div>
+    <div class="activity">
+            <div class="activity-bj">
+
+                </div>
+        <div class="activity-c">
+            <div class="activity-p">
+                <p class="p1">最新活动</p>
+                <p class="p2">Latest Activity</p>
+            </div>
+           
+            <div class="activity-tt">
+                <div class="activity-txt1">
+                    <ul class="activity-ul">
+                        <li class="activity-li1">
+                            06-18
+                            <span class="activity-sp">2018</span>
+                        </li>
+                        <li class="activity-li2">
+                            新品发布会
+                        </li>
+                        <li class="activity-li3">
+                            伴随着T台两侧色彩趋势报告的发布,
+                            VERONICA2017婚纱新品发布会正..
+                        </li>
+                        <li class="activity-li4">
+                            more >
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="activity-txt2">
+                
+
+                </div>
+                <div class="activity-txt3">
+                        <ul class="activity-ul">
+                            <li class="activity-li1">
+                                12-24
+                                <span class="activity-sp">2017</span>
+                            </li>
+                            <li class="activity-li2">
+                                圣诞高级定制发布会
+                            </li>
+                            <li class="activity-li3">
+                                金字塔明文中有这样的话:"天空把自己的光明伸向你,以便你却可以去到.."
+                            </li>
+                            <li class="activity-li4">
+                                more >
+                            </li>
+                        </ul>
+        
+                    </div>
+                    <div class="activity-txt4">
+                            <ul class="activity-ul">
+                                <li class="activity-li1">
+                                    06-21
+                                    <span class="activity-sp">2017</span>
+                                </li>
+                                <li class="activity-li2">
+                                夏季新品发布会
+                                </li>
+                                <li class="activity-li3">
+                                    "我非常欣赏并且热爱美国,因为这里是我活得成功的地方.在许.."
+                                </li>
+                                <li class="activity-li4">
+                                    more >
+                                </li>
+                            </ul>
+            
+                        </div>
+                    </div>
+                    <div class="activity-mo">
+                            MORE
+                        </div>
+            </div>
+    </div>
+    <div class="designer">
+        <div class="designer-c">
+            <div class="designer-p">
+                    <p class="p1">设计师</p>
+                    <p class="p2">Designer </p>
+            </div>
+            <div class="designer-tt">
+                <div class="designer-txt1"> 
+                    <div class="designer-img">
+
+                    </div>
+                    <ul class="designerr-ul">
+                        <li class="designer-li1">
+                            Jason .W
+                        </li>
+                        <li class="designer-li2">
+                            首席设计师
+
+                        </li>
+                        <li class="designer-li3">
+                                法国时装设计师,VERONICA品牌创始人之一,设计总监.2016福布斯最具影响力的设计师
+                        </li>
+                        <li class="designer-li4">
+                            MORE 
+                            <span></span>
+                            
+                        </li>
+                    </ul>
+                </div>
+            <div class="designer-txt2"> 
+                    <div class="designer-img2">
+
+                    </div>
+                    <ul class="designerr-ul">
+                        <li class="designer-li1">
+                            颜澈
+                        </li>
+                        <li class="designer-li2">
+                            资深设计师
+
+                        </li>
+                        <li class="designer-li3">
+                            设计界的"设计鬼才"从题材到变现方式都引起了极大的福布斯中国最具潜力,每个产品都是我们精..
+                        </li>
+                        <li class="designer-li4">
+                            MORE 
+                            <span></span>
+                            
+                        </li>
+                    </ul>
+                </div>
+                     <div class="designer-txt3"> 
+                    <div class="designer-img3">
+
+                    </div>
+                    <ul class="designerr-ul">
+                        <li class="designer-li1">
+                            Katherine .j
+                        </li>
+                        <li class="designer-li2">
+                            运营总监
+
+                        </li>
+                        <li class="designer-li3">
+                            The world's leading electronlc design journal NEWWEBPICK recommended the designer
+                        </li>
+                        <li class="designer-li4">
+                            MORE 
+                            <span></span>
+                            
+                        </li>
+                    </ul>
+                    </div>
+                
+            </div>
+
+
+
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-c">
+            <p class="footer-p">网站备案号: 豫ICP备110121210号</p>
+            <p class="footer-p2">增值电信经营许可证号: 豫B220100033</p>
+            <div class="footer-div">
+                    <a href="#" class="footer-a1">@2018 VERONICA</a>
+                    <a href="#" class="footer-a2">联系我们</a>
+                    <a href="#" class="footer-a3">加入我们</a>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
+
